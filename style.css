@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    box-sizing: border-box;
+}
+/* basic structuer of bage from hearder to footer */
+body{
+    display: flex;
+    min-width: 100vh;
+    flex-direction: column;
+    margin: 0 ;
+}
+#main{
+    display: flex;
+    height: 400px;
+}
+#main > article {
+    flex: 1;
+}
+#main > aside {
+    flex: 1;
+}
+header, footer, article, aside {
+    padding: 1em ;
+}
+/* end basic structuer */
+/* --------------------------------------------------- */
+/* hearder */
+header{
+    padding: 20px;
+    color: blanchedalmond;
+    background : rgb(28, 3, 48,.9);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+header input[type=text] {
+    padding: 8px;
+    margin-top : 1px;
+    font-size: 17px;
+    border-radius: 2px;
+    border:none ;
+}
+#title{
+    padding: 6px 10px;
+    margin-top: 1px;
+    margin-right: 16px; 
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+.search{
+    width: 600px;
+}
+.search-container{
+    display: flex;
+}
+header .search-container button, .btn button{
+    text-align: center;
+    border-radius: 2px;
+    padding: 6px 10px;
+    margin-top: 1px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: black ;
+    display: inline-block;
+}
+.btn {
+    display: flex;
+}
+/* header end */
+/* article */
+article{
+    padding: 0px;
+}
+a{
+    text-decoration: none
+}
+.menu{
+    background-color:#3498DB;
+    display: flex;
+    justify-content: space-around;
+}
+/* dropdown */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover {
+    background-color: #2980B9;
+} 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+/* dropdown end*/
+
+
+
+/* article end */
+
+/* aside */
+article, aside {
+    padding: 0px;
+}
+#aside{
+    text-align: center;
+    font-family:cursive;
+    font-weight: 100;
+    background-color: rgb(28, 3, 48,.5);
+}
+/* aside end */
+
+
+
+
+/* footer */
+footer {
+    background-color: rgb(28, 3, 48,.9);
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    height: 40vh;
+    color: honeydew;
+    display: flex;
+    justify-content: space-around;
+}
+.list{
+    text-align: center ;
+    padding: 1px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    margin: 2px;
+    width: 75px;
+}
+.list, .contact{
+    padding: 15px;
+    margin: 15px;
+}
+/* footer end */
