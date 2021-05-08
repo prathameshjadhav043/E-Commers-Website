@@ -13,16 +13,21 @@
 </head>
 <body>
     <header>
-        <label id="title">i-Shop</label>
-        <!-- <a class="navbar-brand na" href="https://rishabrajput22.github.io/E_Commerce_Pro/#"> Pearl Cart</a> -->
+        <a id="title" href="#Home">i-Shop</a>
         <div class="search-container">
-            <input type="text" placeholder="Search for produncts,brands and more" name="search"><br>
+            <input class="search" type="text" placeholder="Search for produncts,brands and more"><br>
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div class="btn">
             <button type="button"><a>Login</a></button>
             <button type="button"><a>More</a></button>
-            <button type="button" onclick="Show()"><a>Cart</a></button>
+            <div id="More" class="dropdown-content">
+                <a href="#home">Action</a>
+                <a href="#about">Another action</a>
+                <a href="#contact">Something else here</a>
+                <a href="#">Separated link</a>
+            </div>
+            <button type="button" onclick="Show()">Cart</button>
         </div>
     </header>
     <div id="main">
@@ -30,7 +35,7 @@
             <div class="menu">
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Top Offers</button>
-                    <div id="Mobiles" class="dropdown-content">
+                    <div id="Top Offers" class="dropdown-content">
                         <a href="#home">Action</a>
                         <a href="#about">Another action</a>
                         <a href="#contact">Something else here</a>

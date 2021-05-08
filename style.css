@@ -19,9 +19,9 @@ body{
 #main > aside {
     flex: 1;
 }
-header, footer, article, aside {
+/* footer, article, aside {
     padding: 1em ;
-}
+} */
 /* end basic structuer */
 /* --------------------------------------------------- */
 /* hearder */
@@ -41,6 +41,7 @@ header input[type=text] {
     border:none ;
 }
 #title{
+    color: white;
     padding: 6px 10px;
     margin-top: 1px;
     margin-right: 16px; 
@@ -49,7 +50,9 @@ header input[type=text] {
     font-family: 'Dancing Script', cursive;
 }
 .search{
-    width: 600px;
+    padding: 8px;
+    margin-top : 1px;
+    width: 350px;
 }
 .search-container{
     display: flex;
