@@ -47,7 +47,7 @@ header input[type=text] {
     margin-right: 16px; 
     font-size: 20px;
     cursor: pointer;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
 }
 .search{
     padding: 8px;
@@ -73,10 +73,21 @@ header .search-container button, .btn button{
 .btn {
     display: flex;
 }
+@media only screen and (max-width: 600px) {
+    header{
+        height: 150px;
+        color: blanchedalmond;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
 /* header end */
 
 /* article */
-
+article{
+    margin: 0px;
+    padding: 0px;
+}
 a{
     text-decoration: none
 }
@@ -85,6 +96,17 @@ a{
     display: flex;
     justify-content: space-around;
 }
+@media only screen and (max-width: 600px) {
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+    #items{
+        margin: 0px;
+        padding: 200px;
+        flex-direction: column;
+    }
+  }
 /* dropdown */
 .dropbtn {
     background-color: #3498DB;
@@ -209,48 +231,69 @@ a{
     from {opacity: .4}
     to {opacity: 1}
 }
+@media only screen and (max-width: 800px){
+    .row{
+        flex-direction: column;
+    }
+}
 /* article end */
 
 /* aside */
 article{
     padding: 0px;
 }
-#aside{
-    padding: 10%;
+#name{
+    font-family: 'Dancing Script' ;
+    font-size: 34px;
+}
+aside{
+    margin: 0px;
     text-align: center;
-    font-family:cursive;
     font-weight: 100;
-    background-color: rgb(28, 3, 48,.5);
+    border: 1px solid green;
+}
+#aside{
+    height: 500px;
+    display: flex;
+    justify-content: left ;
 }
 /* aside end */
 
 
 /* main */
-
-
 main{
     margin: 0px;
     padding: 0px;
     
 }
+h1.zero::before{
+    opacity: 1;
+}
 h2{
     text-align: center;
 }
 .gallery{
-    padding: 2px;
+    padding: 0px;
+}
+.row{
+    flex-direction: column;
 }
 #items{
+    padding: 10px;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     font-family: arial;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 figure{
     padding: 0px;
+    margin: 0px;
 }
 #card-img{
-    width: 100%;
+    width: 140px;
+    height: 150px;
 }
 #price {
     color: grey;

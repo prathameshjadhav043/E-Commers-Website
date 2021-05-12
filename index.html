@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title of my website Is( Indian Shoping ) -->
+    <!-- Title of my website -->
     <title>i-Shop</title>
     <!-- CSS File Link -->
     <link rel="stylesheet" href="style.css">
@@ -34,7 +34,7 @@
         <article>
             <div class="menu">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Top Offers</button>
+                    <button class="dropbtn">Top Offers</button>
                     <div id="Top Offers" class="dropdown-content">
                         <a href="#home">Action</a>
                         <a href="#about">Another action</a>
@@ -42,62 +42,17 @@
                         <a href="#">Separated link</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Grocery</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
+                <div>
+                    <button class="dropbtn">Grocery</button>
                 </div>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Mobiles</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
+                    <button class="dropbtn" >Mobiles</button>
                 </div>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Fashion</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
+                    <button class="dropbtn">Fashion</button>
                 </div>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Electornis</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Home</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Appliances</button>
-                    <div id="Mobiles" class="dropdown-content">
-                        <a href="#home">Action</a>
-                        <a href="#about">Another action</a>
-                        <a href="#contact">Something else here</a>
-                        <a href="#">Separated link</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Travels</button>
+                    <button class="dropbtn">Travels</button>
                     <div id="Mobiles" class="dropdown-content">
                         <a href="#home">Action</a>
                         <a href="#about">Another action</a>
@@ -140,9 +95,14 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </article>
-        <aside id="aside" style="display: none;">
+        
+        <aside id="aside-fun" style="display: none;">
             <!-- cart title -->
-            <p>My Cart<p>
+            <p id="name">My Cart<p>
+            <div id="aside" class="style">
+            </div>
+            <button type="button" onclick="remove()">Remove</button>
+            <button type="button">Buy</button>
         </aside>
     </div>
     <main>
@@ -150,46 +110,140 @@
         <!-- Gallery -->
 		<div class="gallery">
             <div class="row 1">
+                <h1 style="font-family: fantasy; color:black; text-align: center;">New Laptop Sale</h1>
                 <div id="items">
                     <figure>
-                        <img id="card-img"src="./items/acer predator helios 300.jpeg" >
+                        <img id="card-img" src="./items/Laptops/acer predator helios 300.jpeg">
                         <figcaption>
-                            <h4 id="card-title">Laptop</h4>
-                            <p id="price">$45 / $55</p>
-                            <p><button id="card-button">Add to Cart</button></p>
+                            <h4 id="card-title">Predator Laptop</h4>
+                            <p id="price">Rs.84,99</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
                         </figcaption>
                     </figure>
 
                     <figure>
-                        <img id="card-img"src="./items/acer predator helios 300.jpeg" >
+                        <img id="card-img" src="./items/Laptops/dell inspiron core i5.jpeg">
                         <figcaption>
-                            <h4 id="card-title">Laptop</h4>
-                            <p id="price">$45 / $55</p>
-                            <p><button id="card-button">Add to Cart</button></p>
+                            <h4 id="card-title">Lenovo Laptop</h4>
+                            <p id="price">Rs 50,000</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
                         </figcaption>
                     </figure>
 
                     <figure>
-                        <img id="card-img"src="./items/acer predator helios 300.jpeg" >
+                        <img id="card-img" src="./items/Laptops/hp omen ryzen 5 hexa.jpeg" >
                         <figcaption>
-                            <h4 id="card-title">Laptop</h4>
-                            <p id="price">$45 / $55</p>
-                            <p><button id="card-button">Add to Cart</button></p>
+                            <h4 id="card-title">Dell</h4>
+                            <p id="price">70,000</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
                         </figcaption>
                     </figure>
 
                     <figure>
-                        <img id="card-img"src="./items/acer predator helios 300.jpeg" >
+                        <img id="card-img" src="./items/Laptops/lenovo legion 5 ryzen 5.jpeg" >
                         <figcaption>
-                            <h4 id="card-title">Laptop</h4>
+                            <h4 id="card-title">Samsung Laptop</h4>
+                            <p id="price">85,000</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+                <div>
+
+                    
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="row 2">
+                <h1 style="font-family: fantasy; color: black; text-align: center;">SmartPhones</h1>
+                <div id="items">
+                    <figure id="card">
+                        <img id="card-img" src="./items/mobile/b-samsung3.jpeg" >
+                        <figcaption>
+                            <h4 id="card-title">Samsung 1</h4>
                             <p id="price">$45 / $55</p>
-                            <p><button id="card-button">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img id="card-img" src="./items/mobile/b-samsung4.jpeg" >
+                        <figcaption>
+                            <h4 id="card-title">Samsung 2</h4>
+                            <p id="price">$45 / $55</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img id="card-img" src="./items/mobile/d-vivo1.jpeg" >
+                        <figcaption>
+                            <h4 id="card-title">Vivo 1</h4>
+                            <p id="price">$45 / $55</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="card-img" src="./items/mobile/E-realme2.jpeg" >
+                        <figcaption>
+                            <h4 id="card-title">Real Me</h4>
+                            <p id="price">$45 / $55</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
                         </figcaption>
                     </figure>
                 <div>
             </div>
+        </div>
+        <div class="gallery">
+            <div class="row 3">
+                <h1 style="font-family: fantasy; color:black; text-align: center;">Grocery</h1>
+                <div id="items">
+                    <figure id="card">
+                        <img id="card-img" src="./items/grocory/aashirwad-aata.jpg" >
+                        <figcaption>
+                            <h4 id="card-title">Special title treatment</h4>
+                            <p id="price">RS.100</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
 
-
+                    <figure>
+                        <img id="card-img" src="./items/grocory/amd.jpg" >
+                        <figcaption>
+                            <h4 id="card-title">Special title treatment</h4>
+                            <p id="price">RS.100</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="card-img" src="./items/grocory/garam-masala.jpg" >
+                        <figcaption>
+                            <h4 id="card-title">Special title treatment</h4>
+                            <p id="price">RS.100</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="card-img" src="./items/grocory/salt.jpg" >
+                        <figcaption>
+                            <h4 id="card-title">Special title treatment</h4>
+                            <p id="price">RS.100</p>
+                            <p><button id="card-button" onclick="add()">Add to Cart</button></p>
+                            <p><button id="card-button" onclick="Detail()">Detail</button></p>
+                        </figcaption>
+                    </figure>
+                <div>
+            </div>
         </div>
     </main>
     <footer>

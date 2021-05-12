@@ -1,6 +1,6 @@
 // functions for cart hide and show
 function Show() {
-    var x = document.getElementById('aside') ;
+    var x = document.getElementById('aside-fun') ;
     if(x.style.display == 'none'){
         x.style.display = 'block' ;
     }
@@ -9,7 +9,7 @@ function Show() {
     }
 }
 function myFunction() {
-    document.getElementById("Mobiles").classList.toggle("show");
+    document.getElementById("Top Offer").classList.toggle("show");
 }
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -25,6 +25,8 @@ window.onclick = function(event) {
         }
     }
 }
+//----------------------------------
+
 // Carausel
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -51,4 +53,20 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+}
+
+// add function 
+
+function add() {
+    var itm = document.getElementById("card");
+    var cln = itm.cloneNode(true);
+    document.getElementById("aside").appendChild(cln);
+    var cln = cln.style.button.display = "none" ;
+}
+// remove
+function remove() {
+    var list = document.getElementById("aside");
+    if (list.hasChildNodes()) {
+      list.removeChild(list.childNodes[0]);
+    }
 }
